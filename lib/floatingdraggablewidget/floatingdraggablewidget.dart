@@ -14,7 +14,7 @@ class FloatingDraggableWidgetScreen extends StatelessWidget {
       body: FloatingDraggableWidget(mainScreenWidget:SizedBox(height: double.maxFinite,
       width: double.maxFinite,),
           floatingWidget: FloatingActionButton(
-            onPressed: () {}, child: Icon(Icons.add),backgroundColor: Colors.blue,foregroundColor: Colors.black,),
+            onPressed: () {}, child: Icon(Icons.home),backgroundColor: Colors.blue,foregroundColor: Colors.black,),
           floatingWidgetWidth: 50,
           floatingWidgetHeight: 50),
     );
