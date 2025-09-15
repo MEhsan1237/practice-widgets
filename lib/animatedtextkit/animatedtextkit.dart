@@ -12,42 +12,48 @@ class AnimatedTextKitScreen extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.blue,
       ),
-      body: AnimatedTextKit(
-        animatedTexts: [
-          FadeAnimatedText(
-            "Welcome to the flutter development course",
-            textStyle: TextStyle(
-              color: Colors.red,
-              fontSize: 20,
-              fontWeight: FontWeight.w600,
-            ),
-            duration: Duration(seconds: 2),
-          ),
-          ScaleAnimatedText(
-            "Im flutter developer also",
-            textStyle: TextStyle(
-              color: Colors.red,
-              fontSize: 20,
-              fontWeight: FontWeight.w600,
-            ),
-            duration: Duration(seconds: 2),
-          ),
-          RotateAnimatedText(
-            "Thanks for the course",
-            textStyle: TextStyle(
-              color: Colors.red,
-              fontSize: 20,
-              fontWeight: FontWeight.w600,
-            ),
-            duration: Duration(seconds: 2),
-          ),
+      body:  Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment:  MainAxisAlignment.center,
+        children: [
+          AnimatedTextKit(
+            animatedTexts: [
+              FadeAnimatedText(
+                "Welcome to the flutter development course",
+                textStyle: TextStyle(
+                  color: Colors.red,
+                  fontSize: 20,
+                  fontWeight: FontWeight.w600,
+                ),
+                duration: Duration(seconds: 2),
+              ),
+              ScaleAnimatedText(
+                "Im flutter developer also",
+                textStyle: TextStyle(
+                  color: Colors.red,
+                  fontSize: 20,
+                  fontWeight: FontWeight.w600,
+                ),
+                duration: Duration(seconds: 2),
+              ),
+              RotateAnimatedText(
+                "Thanks for the course",
+                textStyle: TextStyle(
+                  color: Colors.red,
+                  fontSize: 20,
+                  fontWeight: FontWeight.w600,
+                ),
+                duration: Duration(seconds: 2),
+              ),
 
+            ],
+            pause: Duration(milliseconds: 600),
+            stopPauseOnTap: true,
+            totalRepeatCount: 100,
+            displayFullTextOnTap: true,
+          ),
         ],
-        pause: Duration(milliseconds: 600),
-        stopPauseOnTap: true,
-        totalRepeatCount: 100,
-        displayFullTextOnTap: true,
-      ),
+      )
     );
   }
 }
